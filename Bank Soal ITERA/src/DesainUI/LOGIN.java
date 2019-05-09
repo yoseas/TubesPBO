@@ -234,12 +234,21 @@ public class LOGIN extends javax.swing.JFrame {
             rs = ps.executeQuery();
 
             if (rs.next()) {
-                JOptionPane.showMessageDialog(null, "Login Berhasil");
+                if(uname.equals("admin")){                    
+                JOptionPane.showMessageDialog(null, "Welcome Admin");
+                Admin admin = new Admin();
+                admin.setVisible(true);
+                admin.pack();
+                admin.setLocationRelativeTo(null);
+                this.dispose();
+                }else{
+                JOptionPane.showMessageDialog(null, "Welcome "+uname);
                 User user = new User();
                 user.setVisible(true);
                 user.pack();
                 user.setLocationRelativeTo(null);
                 this.dispose();
+                }            
             } else {
                 JOptionPane.showMessageDialog(null, "Username/Password Salah");
 
@@ -288,12 +297,21 @@ public class LOGIN extends javax.swing.JFrame {
             rs = ps.executeQuery();
             
             if(rs.next()){
-                JOptionPane.showMessageDialog(null, "Login Berhasil");
+if(uname.equals("admin")){                    
+                JOptionPane.showMessageDialog(null, "Welcome Admin");
+                Admin admin = new Admin();
+                admin.setVisible(true);
+                admin.pack();
+                admin.setLocationRelativeTo(null);
+                this.dispose();
+                }else{
+                JOptionPane.showMessageDialog(null, "Welcome "+uname);
                 User user = new User();
                 user.setVisible(true);
                 user.pack();
                 user.setLocationRelativeTo(null);
-                this.dispose();       
+                this.dispose();
+                }
             }else{
                 JOptionPane.showMessageDialog(null, "Username/Password Salah");
                 
