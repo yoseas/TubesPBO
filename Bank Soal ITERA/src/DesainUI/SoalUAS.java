@@ -5,10 +5,6 @@
  */
 package DesainUI;
 
-/**
- *
- * @author DELL 3442
- */
 public class SoalUAS extends javax.swing.JFrame {
 
     /**
