@@ -278,7 +278,7 @@ public class RegisterForm extends javax.swing.JFrame {
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // TODO add your handling code here:
-        Login log = new Login();
+        LOGIN log = new LOGIN();
         log.setVisible(true);
         log.pack();
         log.setLocationRelativeTo(null);
@@ -343,7 +343,7 @@ public class RegisterForm extends javax.swing.JFrame {
                     regis.setLocationRelativeTo(null);
                     this.dispose();
             }else{
-        Login login = new Login();
+        LOGIN login = new LOGIN();
         login.setVisible(true);
         login.pack();
         login.setLocationRelativeTo(null);
