@@ -58,34 +58,25 @@ public class LOGIN extends javax.swing.JFrame {
         jLabel8.setText("jLabel8");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setUndecorated(true);
 
         jPanel2.setBackground(new java.awt.Color(164, 164, 164));
-        jPanel2.setLayout(null);
 
         jLabel2.setText("USERNAME");
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(49, 55, 57, 14);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField1);
-        jTextField1.setBounds(124, 52, 241, 20);
 
         jLabel3.setText("PASSWORD");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(49, 93, 57, 14);
 
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jPasswordField1KeyPressed(evt);
             }
         });
-        jPanel2.add(jPasswordField1);
-        jPasswordField1.setBounds(124, 90, 241, 20);
 
         jButton1.setText("LOGIN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -93,8 +84,6 @@ public class LOGIN extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1);
-        jButton1.setBounds(150, 130, 97, 39);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 0));
@@ -104,17 +93,56 @@ public class LOGIN extends javax.swing.JFrame {
                 jLabel6MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel6);
-        jLabel6.setBounds(61, 187, 275, 14);
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (13).png"))); // NOI18N
         jLabel7.setText("jLabel7");
-        jPanel2.add(jLabel7);
-        jLabel7.setBounds(-10, -10, 980, 400);
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 90, 420, 270);
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(jLabel3)
+                .addGap(6, 6, 6)
+                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel6))
+            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel2))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel3))
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel6))
+            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         jPanel1.setBackground(new java.awt.Color(245, 229, 27));
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -172,8 +200,20 @@ public class LOGIN extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 420, 90);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -196,7 +236,8 @@ public class LOGIN extends javax.swing.JFrame {
             ps.setString(2, pass);
 
             rs = ps.executeQuery();
-
+            
+            //filter akun (admin/user)
             if (rs.next()) {
                 if(uname.equals("admin")){                    
                 JOptionPane.showMessageDialog(null, "Welcome Admin");
@@ -223,11 +264,13 @@ public class LOGIN extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    //menutup UI dengan mengklik tanda 'X'
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jLabel5MouseClicked
-
+    
+    //minimize UI dengan mengklik tombol '-'
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // TODO add your handling code here:
         this.setState(JFrame.ICONIFIED);
@@ -243,6 +286,7 @@ public class LOGIN extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
+    //menekan tombol Enter sebagai klik tombol login saat berada di kolom password
     private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
         // TODO add your handling code here:
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
@@ -259,22 +303,22 @@ public class LOGIN extends javax.swing.JFrame {
             ps.setString(2, pass);
             
             rs = ps.executeQuery();
-            
+            //filter akun (admin/user)
             if(rs.next()){
-if(uname.equals("admin")){                    
-                JOptionPane.showMessageDialog(null, "Welcome Admin");
-                Admin admin = new Admin();
-                admin.setVisible(true);
-                admin.pack();
-                admin.setLocationRelativeTo(null);
-                this.dispose();
+                if(uname.equals("admin")){                    
+                    JOptionPane.showMessageDialog(null, "Welcome Admin");
+                    Admin admin = new Admin();
+                    admin.setVisible(true);
+                    admin.pack();
+                    admin.setLocationRelativeTo(null);
+                    this.dispose();
                 }else{
-                JOptionPane.showMessageDialog(null, "Welcome "+uname);
-                User user = new User();
-                user.setVisible(true);
-                user.pack();
-                user.setLocationRelativeTo(null);
-                this.dispose();
+                    JOptionPane.showMessageDialog(null, "Welcome "+uname);
+                    User user = new User();
+                    user.setVisible(true);
+                    user.pack();
+                    user.setLocationRelativeTo(null);
+                    this.dispose();
                 }
             }else{
                 JOptionPane.showMessageDialog(null, "Username/Password Salah");
@@ -291,7 +335,8 @@ if(uname.equals("admin")){
         dragxmouse = evt.getX();
         dragymouse = evt.getY();
     }//GEN-LAST:event_jPanel1MousePressed
-
+    
+//drag ui ke posisi yang diinginkan
     private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();

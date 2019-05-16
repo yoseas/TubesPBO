@@ -13,7 +13,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import java.awt.event.KeyEvent;
 
 /**
  *
@@ -30,31 +29,10 @@ public class RegisterForm extends javax.swing.JFrame {
         Connection con = null;
         PreparedStatement pst = null;
         ResultSet rs = null;
-        
-    public void FilterUsername(KeyEvent a){
-        if(Character.isDigit(a.getKeyChar()) && Character.isAlphabetic(a.getKeyChar())){
-            a.consume();
-            JOptionPane.showMessageDialog(null, "Kolom Username Tidak Boleh Kosong");
-        }
-    }
-
-    public void FilterPassword(KeyEvent b){
-        if(Character.isDigit(b.getKeyChar()) && Character.isAlphabetic(b.getKeyChar())){
-            b.consume();
-            JOptionPane.showMessageDialog(null, "Kolom Password Tidak Boleh Kosong");
-        }
-    }
-
-    public void FilterEmail(KeyEvent c){
-        if(Character.isDigit(c.getKeyChar()) && Character.isAlphabetic(c.getKeyChar())){
-            c.consume();
-            JOptionPane.showMessageDialog(null, "Kolom Email Tidak Boleh Kosong");
-        }
-    }
-    
+            
     public RegisterForm() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);//menengahkan UI
     }
 
     /**
@@ -71,6 +49,7 @@ public class RegisterForm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -80,11 +59,9 @@ public class RegisterForm extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         cancel = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(245, 229, 27));
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -127,7 +104,7 @@ public class RegisterForm extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -146,23 +123,15 @@ public class RegisterForm extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 420, 90);
-
         jPanel2.setBackground(new java.awt.Color(164, 164, 164));
-        jPanel2.setLayout(null);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (13).png"))); // NOI18N
 
         jLabel7.setText("EMAIL");
-        jPanel2.add(jLabel7);
-        jLabel7.setBounds(38, 58, 70, 14);
 
         jLabel8.setText("PASSWORD");
-        jPanel2.add(jLabel8);
-        jLabel8.setBounds(38, 134, 57, 14);
 
         jLabel9.setText("USERNAME");
-        jPanel2.add(jLabel9);
-        jLabel9.setBounds(38, 96, 70, 14);
 
         email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,24 +143,18 @@ public class RegisterForm extends javax.swing.JFrame {
                 emailKeyTyped(evt);
             }
         });
-        jPanel2.add(email);
-        email.setBounds(126, 55, 262, 20);
 
         username.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 usernameKeyTyped(evt);
             }
         });
-        jPanel2.add(username);
-        username.setBounds(126, 93, 262, 20);
 
         password.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 passwordKeyTyped(evt);
             }
         });
-        jPanel2.add(password);
-        password.setBounds(126, 131, 262, 20);
 
         jButton1.setText("DAFTAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -199,8 +162,6 @@ public class RegisterForm extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1);
-        jButton1.setBounds(225, 169, 110, 39);
 
         jLabel4.setBackground(new java.awt.Color(245, 229, 27));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -212,8 +173,6 @@ public class RegisterForm extends javax.swing.JFrame {
                 jLabel4MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel4);
-        jLabel4.setBounds(83, 234, 252, 14);
 
         cancel.setText("CANCEL");
         cancel.addActionListener(new java.awt.event.ActionListener() {
@@ -221,15 +180,82 @@ public class RegisterForm extends javax.swing.JFrame {
                 cancelActionPerformed(evt);
             }
         });
-        jPanel2.add(cancel);
-        cancel.setBounds(83, 169, 110, 39);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (13).png"))); // NOI18N
-        jPanel2.add(jLabel5);
-        jLabel5.setBounds(-780, 0, 1770, 750);
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel8)
+                .addGap(19, 19, 19)
+                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jLabel4))
+            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel7))
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel9))
+                    .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel8))
+                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel4))
+            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 81, 0, 270);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -237,7 +263,7 @@ public class RegisterForm extends javax.swing.JFrame {
     private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emailActionPerformed
-
+    //menampilkan UI LOGIN
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // TODO add your handling code here:
         LOGIN log = new LOGIN();
@@ -248,11 +274,13 @@ public class RegisterForm extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
 
+    //menutup UI
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
         System.exit(0);//keluar program
     }//GEN-LAST:event_jLabel3MouseClicked
-
+    
+    //minimize UI
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
         this.setState(JFrame.ICONIFIED);        
@@ -271,71 +299,71 @@ public class RegisterForm extends javax.swing.JFrame {
             pst.setString(1,user);
             pst.setString(2,pass);
             pst.setString(3,mail);
-                    if(mail.equals("")){
-                JOptionPane.showMessageDialog(null, "Email Tidak boleh kosong");
-            }else if(user.equals("")){
-                JOptionPane.showMessageDialog(null, "Username Tidak boleh kosong");                
-            }else if(pass.equals("")){
-                JOptionPane.showMessageDialog(null, "Password Tidak boleh kosong");                
-            }else{
-
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Pendaftaran Berhasil");
+            //mensyaratkan kolom e-mail tidak boleh kosong
+                if(mail.equals("")){
+                    JOptionPane.showMessageDialog(null, "Email Tidak boleh kosong");
+            //mensyaratkan kolom username tidak boleh kosong                    
+                }else if(user.equals("")){
+                    JOptionPane.showMessageDialog(null, "Username Tidak boleh kosong");                
+                }else if(pass.equals("")){
+            //mensyaratkan kolom password tidak boleh kosong                    
+                    JOptionPane.showMessageDialog(null, "Password Tidak boleh kosong");                
+                }else{
+                pst.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Pendaftaran Berhasil");
             }
         }
             catch(HeadlessException | SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
-        }
+            }
+        //kembali ke UI Register jika ada salah satu kolom kosong
         if(mail.equals("")){
-        RegisterForm regis = new RegisterForm();
-        regis.setVisible(true);
-        regis.pack();
-        regis.setLocationRelativeTo(null);
-        this.dispose();
-            }else if(user.equals("")){
-                    RegisterForm regis = new RegisterForm();
-                    regis.setVisible(true);
-                    regis.pack();
-                    regis.setLocationRelativeTo(null);
-                    this.dispose();
-            }else if(pass.equals("")){
-                    RegisterForm regis = new RegisterForm();
-                    regis.setVisible(true);
-                    regis.pack();
-                    regis.setLocationRelativeTo(null);
-                    this.dispose();
-            }else{
-        LOGIN login = new LOGIN();
-        login.setVisible(true);
-        login.pack();
-        login.setLocationRelativeTo(null);
-        this.dispose();
+            RegisterForm regis = new RegisterForm();
+            regis.setVisible(true);
+            regis.pack();
+            regis.setLocationRelativeTo(null);
+            this.dispose();
+        }else if(user.equals("")){
+            RegisterForm regis = new RegisterForm();
+            regis.setVisible(true);
+            regis.pack();
+            regis.setLocationRelativeTo(null);
+            this.dispose();
+        }else if(pass.equals("")){
+            RegisterForm regis = new RegisterForm();
+            regis.setVisible(true);
+            regis.pack();
+            regis.setLocationRelativeTo(null);
+            this.dispose();
+        }else{
+            LOGIN login = new LOGIN();
+            login.setVisible(true);
+            login.pack();
+            login.setLocationRelativeTo(null);
+            this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-    }    
+}    
     private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
     }//GEN-LAST:event_jPanel1MouseDragged
 
+    //menggeser posisi UI
     private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
         dragxmouse = evt.getX();
         dragymouse = evt.getY();
     }//GEN-LAST:event_jPanel1MousePressed
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
-
     }//GEN-LAST:event_cancelActionPerformed
 
     private void usernameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameKeyTyped
-        FilterUsername(evt);
     }//GEN-LAST:event_usernameKeyTyped
 
     private void emailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailKeyTyped
-        FilterEmail(evt);
     }//GEN-LAST:event_emailKeyTyped
 
     private void passwordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyTyped
-        FilterPassword(evt);
     }//GEN-LAST:event_passwordKeyTyped
 
     /**
