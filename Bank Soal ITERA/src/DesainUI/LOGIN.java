@@ -53,30 +53,41 @@ public class LOGIN extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (13).png"))); // NOI18N
         jLabel8.setText("jLabel8");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        getContentPane().setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(164, 164, 164));
+        jPanel2.setLayout(null);
 
         jLabel2.setText("USERNAME");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(60, 50, 80, 14);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
+        jPanel2.add(jTextField1);
+        jTextField1.setBounds(140, 40, 241, 30);
 
         jLabel3.setText("PASSWORD");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(59, 99, 57, 14);
 
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jPasswordField1KeyPressed(evt);
             }
         });
+        jPanel2.add(jPasswordField1);
+        jPasswordField1.setBounds(140, 90, 241, 30);
 
         jButton1.setText("LOGIN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +95,8 @@ public class LOGIN extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(160, 147, 97, 39);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 0));
@@ -93,56 +106,15 @@ public class LOGIN extends javax.swing.JFrame {
                 jLabel6MouseClicked(evt);
             }
         });
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(70, 217, 275, 14);
 
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (13).png"))); // NOI18N
-        jLabel7.setText("jLabel7");
+        jPanel2.add(jLabel7);
+        jLabel7.setBounds(-120, -200, 780, 520);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jLabel3)
-                .addGap(6, 6, 6)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel6))
-            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel2))
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel3))
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jLabel6))
-            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 90, 420, 270);
 
         jPanel1.setBackground(new java.awt.Color(245, 229, 27));
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -155,10 +127,13 @@ public class LOGIN extends javax.swing.JFrame {
                 jPanel1MousePressed(evt);
             }
         });
+        jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setText("LOGIN");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(41, 0, 160, 90);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setText("-");
@@ -167,6 +142,8 @@ public class LOGIN extends javax.swing.JFrame {
                 jLabel4MouseClicked(evt);
             }
         });
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(359, 11, 22, 25);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel5.setText("X");
@@ -175,94 +152,20 @@ public class LOGIN extends javax.swing.JFrame {
                 jLabel5MouseClicked(evt);
             }
         });
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(387, 15, 22, 25);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
-                .addGap(39, 39, 39)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (6).png"))); // NOI18N
+        jLabel9.setText("jLabel9");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(90, -70, 660, 410);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 420, 90);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    //     TODO add your handling code here:
-        PreparedStatement ps;
-        ResultSet rs;
-        String uname = jTextField1.getText();
-        String pass = String.valueOf(jPasswordField1.getPassword());
-        String query = "SELECT * FROM `user` WHERE `username` =? AND `password` =?";
-        try {
-            ps = MyConnection.getConnection().prepareStatement(query);
-
-            ps.setString(1, uname);
-            ps.setString(2, pass);
-
-            rs = ps.executeQuery();
-            
-            //filter akun (admin/user)
-            if (rs.next()) {
-                if(uname.equals("admin")){                    
-                JOptionPane.showMessageDialog(null, "Welcome Admin");
-                Admin admin = new Admin();
-                admin.setVisible(true);
-                admin.pack();
-                admin.setLocationRelativeTo(null);
-                this.dispose();
-                }else{
-                JOptionPane.showMessageDialog(null, "Welcome "+uname);
-                User user = new User();
-                user.setVisible(true);
-                user.pack();
-                user.setLocationRelativeTo(null);
-                this.dispose();
-                }            
-            } else {
-                JOptionPane.showMessageDialog(null, "Username/Password Salah");
-
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(LOGIN.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     //menutup UI dengan mengklik tanda 'X'
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
@@ -276,6 +179,17 @@ public class LOGIN extends javax.swing.JFrame {
         this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_jLabel4MouseClicked
 
+    private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
+        dragxmouse = evt.getX();
+        dragymouse = evt.getY();
+    }//GEN-LAST:event_jPanel1MousePressed
+    
+//drag ui ke posisi yang diinginkan
+    private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+    }//GEN-LAST:event_jPanel1MouseDragged
+
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your handling code here:
         RegisterForm rgf = new RegisterForm();
@@ -286,26 +200,24 @@ public class LOGIN extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
-    //menekan tombol Enter sebagai klik tombol login saat berada di kolom password
-    private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
-        // TODO add your handling code here:
-        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //     TODO add your handling code here:
         PreparedStatement ps;
         ResultSet rs;
         String uname = jTextField1.getText();
         String pass = String.valueOf(jPasswordField1.getPassword());
-        
-        String query =  "SELECT * FROM `user` WHERE `username` =? AND `password` =?";
+        String query = "SELECT * FROM `user` WHERE `username` =? AND `password` =?";
         try {
             ps = MyConnection.getConnection().prepareStatement(query);
-            
+
             ps.setString(1, uname);
             ps.setString(2, pass);
-            
+
             rs = ps.executeQuery();
+
             //filter akun (admin/user)
-            if(rs.next()){
-                if(uname.equals("admin")){                    
+            if (rs.next()) {
+                if(uname.equals("admin")){
                     JOptionPane.showMessageDialog(null, "Welcome Admin");
                     Admin admin = new Admin();
                     admin.setVisible(true);
@@ -320,27 +232,63 @@ public class LOGIN extends javax.swing.JFrame {
                     user.setLocationRelativeTo(null);
                     this.dispose();
                 }
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(null, "Username/Password Salah");
-                
+
             }
         } catch (SQLException ex) {
             Logger.getLogger(LOGIN.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    //menekan tombol Enter sebagai klik tombol login saat berada di kolom password
+    private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            PreparedStatement ps;
+            ResultSet rs;
+            String uname = jTextField1.getText();
+            String pass = String.valueOf(jPasswordField1.getPassword());
+
+            String query =  "SELECT * FROM `user` WHERE `username` =? AND `password` =?";
+            try {
+                ps = MyConnection.getConnection().prepareStatement(query);
+
+                ps.setString(1, uname);
+                ps.setString(2, pass);
+
+                rs = ps.executeQuery();
+                //filter akun (admin/user)
+                if(rs.next()){
+                    if(uname.equals("admin")){
+                        JOptionPane.showMessageDialog(null, "Welcome Admin");
+                        Admin admin = new Admin();
+                        admin.setVisible(true);
+                        admin.pack();
+                        admin.setLocationRelativeTo(null);
+                        this.dispose();
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Welcome "+uname);
+                        User user = new User();
+                        user.setVisible(true);
+                        user.pack();
+                        user.setLocationRelativeTo(null);
+                        this.dispose();
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null, "Username/Password Salah");
+
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(LOGIN.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
-    
+
     }//GEN-LAST:event_jPasswordField1KeyPressed
 
-    private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
-        dragxmouse = evt.getX();
-        dragymouse = evt.getY();
-    }//GEN-LAST:event_jPanel1MousePressed
-    
-//drag ui ke posisi yang diinginkan
-    private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-    }//GEN-LAST:event_jPanel1MouseDragged
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -387,6 +335,7 @@ public class LOGIN extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;

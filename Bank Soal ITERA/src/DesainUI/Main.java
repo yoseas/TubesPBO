@@ -100,10 +100,11 @@ public class Main extends javax.swing.JFrame {
         jPanel2.add(jLabel8);
         jLabel8.setBounds(0, 260, 480, 18);
 
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setIcon(new javax.swing.ImageIcon("D:\\Java repository\\Tubes\\src\\images\\Vectors Pack (Gabrielghdesign) (13).png")); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (13).png"))); // NOI18N
+        jLabel7.setText("jLabel7");
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(-640, -80, 1520, 710);
+        jLabel7.setBounds(-100, -20, 680, 540);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(280, 0, 480, 360);

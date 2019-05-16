@@ -34,10 +34,10 @@ public class Admin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         upload = new javax.swing.JButton();
-        delete = new javax.swing.JButton();
-        update = new javax.swing.JButton();
         logout = new javax.swing.JButton();
         request = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -68,6 +68,7 @@ public class Admin extends javax.swing.JFrame {
         jPanel1.setBounds(0, 0, 420, 70);
 
         jPanel2.setBackground(new java.awt.Color(164, 164, 164));
+        jPanel2.setLayout(null);
 
         upload.setText("Upload");
         upload.addActionListener(new java.awt.event.ActionListener() {
@@ -75,15 +76,8 @@ public class Admin extends javax.swing.JFrame {
                 uploadActionPerformed(evt);
             }
         });
-
-        delete.setText("Delete");
-        delete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteActionPerformed(evt);
-            }
-        });
-
-        update.setText("Update");
+        jPanel2.add(upload);
+        upload.setBounds(20, 83, 100, 60);
 
         logout.setText("Logout");
         logout.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +85,8 @@ public class Admin extends javax.swing.JFrame {
                 logoutActionPerformed(evt);
             }
         });
+        jPanel2.add(logout);
+        logout.setBounds(180, 220, 65, 23);
 
         request.setText("Request");
         request.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -106,42 +102,22 @@ public class Admin extends javax.swing.JFrame {
                 requestActionPerformed(evt);
             }
         });
+        jPanel2.add(request);
+        request.setBounds(290, 83, 110, 60);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(delete)
-                        .addGap(81, 81, 81)
-                        .addComponent(logout)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(upload)
-                        .addGap(82, 82, 82)
-                        .addComponent(update)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
-                        .addComponent(request)
-                        .addGap(27, 27, 27))))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(upload)
-                    .addComponent(update)
-                    .addComponent(request))
-                .addGap(44, 44, 44)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(delete)
-                    .addComponent(logout))
-                .addContainerGap(117, Short.MAX_VALUE))
-        );
+        jButton1.setText("Delete");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(160, 80, 100, 60);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (13).png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(-210, -10, 670, 310);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(0, 70, 420, 300);
@@ -151,7 +127,11 @@ public class Admin extends javax.swing.JFrame {
 
     private void uploadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadActionPerformed
         // TODO add your handling code here:
-        
+        UPLOAD up =new UPLOAD();
+        up.setVisible(true);
+        up.pack();
+        up.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_uploadActionPerformed
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
@@ -164,7 +144,12 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutActionPerformed
 
     private void requestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestActionPerformed
-        // TODO add your handling code here:        
+        // TODO add your handling code here:    
+        RequestA req =new RequestA();
+        req.setVisible(true);
+        req.pack();
+        req.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_requestActionPerformed
 
     private void requestMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_requestMouseEntered
@@ -179,8 +164,14 @@ public class Admin extends javax.swing.JFrame {
         req.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.dispose();    }//GEN-LAST:event_requestMouseClicked
 
-    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
-    }//GEN-LAST:event_deleteActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Delete del = new Delete();
+        del.setVisible(true);
+        del.pack();
+        del.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,13 +209,13 @@ public class Admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton delete;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton logout;
     private javax.swing.JButton request;
-    private javax.swing.JButton update;
     private javax.swing.JButton upload;
     // End of variables declaration//GEN-END:variables
 }

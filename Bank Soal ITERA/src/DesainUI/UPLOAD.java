@@ -43,6 +43,8 @@ public class UPLOAD extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -55,46 +57,72 @@ public class UPLOAD extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(245, 229, 27));
+        jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel1.setText("UPLOAD");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(10, 11, 177, 58);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(243, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel8.setText("←");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(989, 11, 55, 400);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (6).png"))); // NOI18N
+        jLabel10.setText("jLabel10");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(60, -60, 790, 400);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 430, 100);
 
         jPanel2.setBackground(new java.awt.Color(164, 164, 164));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.setLayout(null);
 
         jLabel2.setText("Kode Matakuliah");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(28, 25, 80, 14);
+        jPanel2.add(jTextField1);
+        jTextField1.setBounds(150, 22, 250, 20);
 
         jLabel3.setText("Nama Matakuliah");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(28, 63, 84, 14);
+        jPanel2.add(jTextField2);
+        jTextField2.setBounds(150, 60, 250, 20);
 
         jLabel4.setText("Prodi");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(28, 101, 84, 14);
+        jPanel2.add(jTextField3);
+        jTextField3.setBounds(150, 98, 250, 20);
 
         jLabel5.setText("Semester");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(28, 139, 46, 14);
+        jPanel2.add(jTextField4);
+        jTextField4.setBounds(150, 136, 250, 20);
 
         jLabel6.setText("Path");
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(28, 215, 22, 14);
+        jPanel2.add(jTextField5);
+        jTextField5.setBounds(150, 212, 250, 20);
 
         jButton1.setText("UPLOAD");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -102,59 +130,20 @@ public class UPLOAD extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(172, 250, 84, 30);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addComponent(jLabel3))
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField3)
-                    .addComponent(jTextField4)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
+        jLabel7.setText("Kategori");
+        jPanel2.add(jLabel7);
+        jLabel7.setBounds(28, 177, 41, 14);
+        jPanel2.add(jTextField6);
+        jTextField6.setBounds(150, 174, 250, 20);
+
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (13).png"))); // NOI18N
+        jLabel9.setText("jLabel9");
+        jPanel2.add(jLabel9);
+        jLabel9.setBounds(-290, -20, 1070, 560);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(0, 100, 430, 320);
@@ -168,18 +157,20 @@ public class UPLOAD extends javax.swing.JFrame {
         String nama=jTextField2.getText();
         String prodi=jTextField3.getText();
         String semester=jTextField4.getText();
+        String kategori=jTextField6.getText();
         String path=jTextField5.getText();
         try{
             String sql = "INSERT INTO matakuliah"
-            +"(kode_mk, nama_mk, prodi, semester, path)"
-            +"VALUES (?,?,?,?,?)";
+            +"(kode_mk, nama_mk, prodi, semester, kategori, path)"
+            +"VALUES (?,?,?,?,?,?)";
             con = DriverManager.getConnection("jdbc:mysql://localhost/banksoal_itera", "root", "");
             pst = con.prepareStatement(sql);
             pst.setString(1, kodemk);
             pst.setString(2, nama);
             pst.setString(3, prodi);
             pst.setString(4, semester);
-            pst.setString(5, path);
+            pst.setString(5, kategori);
+            pst.setString(6, path);
             if (kodemk.equals("")) {
                 JOptionPane.showMessageDialog(null, "Kode matakuliah Tidak boleh kosong");
             } else if (nama.equals("")) {
@@ -188,6 +179,8 @@ public class UPLOAD extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Prodi Tidak boleh kosong");
             } else if (semester.equals("")) {
                 JOptionPane.showMessageDialog(null, "Semester Tidak boleh kosong");
+            } else if (kategori.equals("")) {
+                JOptionPane.showMessageDialog(null, "PKategori Tidak boleh kosong");
             } else if (path.equals("")) {
                 JOptionPane.showMessageDialog(null, "Path Tidak boleh kosong");
             } else {
@@ -198,6 +191,15 @@ public class UPLOAD extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+        Admin main = new Admin();
+        main.setVisible(true);
+        main.pack();
+        main.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jLabel8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -237,11 +239,15 @@ public class UPLOAD extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
@@ -249,5 +255,6 @@ public class UPLOAD extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
