@@ -103,7 +103,7 @@ public class Main extends javax.swing.JFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setIcon(new javax.swing.ImageIcon("D:\\Java repository\\Tubes\\src\\images\\Vectors Pack (Gabrielghdesign) (13).png")); // NOI18N
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(-620, -80, 1520, 710);
+        jLabel7.setBounds(-640, -80, 1520, 710);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(280, 0, 480, 360);
