@@ -194,7 +194,7 @@ public class RequestA extends javax.swing.JFrame {
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // TODO add your handling code here:
-        User main = new User();
+        Admin main = new Admin();
         main.setVisible(true);
         main.pack();
         main.setLocationRelativeTo(null);
