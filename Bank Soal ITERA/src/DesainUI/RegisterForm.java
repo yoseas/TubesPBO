@@ -341,6 +341,7 @@ public class RegisterForm extends javax.swing.JFrame {
             login.pack();
             login.setLocationRelativeTo(null);
             this.dispose();
+           
     }//GEN-LAST:event_jButton1ActionPerformed
 }    
     private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged

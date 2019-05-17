@@ -63,6 +63,7 @@ public class Delete extends javax.swing.JFrame {
         delete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel2.setBackground(new java.awt.Color(245, 229, 27));
         jPanel2.setPreferredSize(new java.awt.Dimension(402, 80));

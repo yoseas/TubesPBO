@@ -40,7 +40,9 @@ public class Admin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setMinimumSize(new java.awt.Dimension(418, 351));
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(245, 229, 27));
 
@@ -61,14 +63,13 @@ public class Admin extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 420, 70);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 80));
 
         jPanel2.setBackground(new java.awt.Color(164, 164, 164));
-        jPanel2.setLayout(null);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         upload.setText("Upload");
         upload.addActionListener(new java.awt.event.ActionListener() {
@@ -76,8 +77,7 @@ public class Admin extends javax.swing.JFrame {
                 uploadActionPerformed(evt);
             }
         });
-        jPanel2.add(upload);
-        upload.setBounds(20, 83, 100, 60);
+        jPanel2.add(upload, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 83, 100, 60));
 
         logout.setText("Logout");
         logout.addActionListener(new java.awt.event.ActionListener() {
@@ -85,8 +85,7 @@ public class Admin extends javax.swing.JFrame {
                 logoutActionPerformed(evt);
             }
         });
-        jPanel2.add(logout);
-        logout.setBounds(180, 220, 65, 23);
+        jPanel2.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 110, -1));
 
         request.setText("Request");
         request.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -102,8 +101,7 @@ public class Admin extends javax.swing.JFrame {
                 requestActionPerformed(evt);
             }
         });
-        jPanel2.add(request);
-        request.setBounds(290, 83, 110, 60);
+        jPanel2.add(request, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 83, 110, 60));
 
         jButton1.setText("Delete");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -111,18 +109,16 @@ public class Admin extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1);
-        jButton1.setBounds(160, 80, 100, 60);
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 100, 60));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (13).png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(-210, -10, 670, 310);
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-250, -30, 670, 310));
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 70, 420, 300);
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 420, 270));
 
-        pack();
+        setSize(new java.awt.Dimension(418, 351));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void uploadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadActionPerformed

@@ -46,6 +46,8 @@ public class Main extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(773, 394));
+        setUndecorated(true);
         getContentPane().setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(164, 164, 164));
@@ -55,19 +57,19 @@ public class Main extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Knowledge");
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(0, 30, 480, 30);
+        jLabel5.setBounds(0, 30, 480, 32);
 
         jLabel6.setFont(new java.awt.Font("Venus Rising", 0, 24)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Power");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(0, 90, 480, 30);
+        jLabel6.setBounds(0, 90, 480, 32);
 
         jLabel4.setFont(new java.awt.Font("Venus Rising", 0, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("is");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(0, 60, 480, 30);
+        jLabel4.setBounds(0, 60, 480, 32);
 
         jButton1.setText("R E G I S T E R");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +100,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jLabel8);
-        jLabel8.setBounds(0, 260, 480, 18);
+        jLabel8.setBounds(0, 260, 480, 19);
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Vectors Pack (Gabrielghdesign) (13).png"))); // NOI18N
@@ -148,17 +150,21 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 280, 360);
 
-        pack();
+        setSize(new java.awt.Dimension(757, 355));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        LOGIN login = new LOGIN();
-        login.setVisible(true);
-        login.pack();
-        login.setLocationRelativeTo(null);
-        login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dispose();
+//        LOGIN login = new LOGIN();
+//        login.setVisible(true);
+//        login.pack();
+//        login.setLocationRelativeTo(null);
+//        login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        this.dispose();\\
+        
+        dispose();
+        new LOGIN().setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

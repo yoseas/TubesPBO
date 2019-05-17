@@ -36,7 +36,7 @@ public class User extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(245, 229, 27));
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -66,8 +66,7 @@ public class User extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 720, 80);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(164, 164, 164));
         jPanel2.setLayout(null);
@@ -114,8 +113,7 @@ public class User extends javax.swing.JFrame {
         jPanel2.add(jLabel1);
         jLabel1.setBounds(-30, -30, 1390, 560);
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 80, 720, 340);
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 720, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -292,11 +292,14 @@ public class Request extends javax.swing.JFrame {
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Request Berhasil");
             }
+                     new User().setVisible(rootPaneCheckingEnabled);
+                    dispose();
         }
             catch(HeadlessException | SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
         }
-
+           
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

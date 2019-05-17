@@ -50,8 +50,9 @@ public class SoalUTS extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(716, 348));
         setUndecorated(true);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(245, 229, 27));
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -82,7 +83,7 @@ public class SoalUTS extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 234, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -93,8 +94,7 @@ public class SoalUTS extends javax.swing.JFrame {
                 .addComponent(jLabel6))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 724, 80);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, -1));
 
         jPanel2.setBackground(new java.awt.Color(164, 164, 164));
         jPanel2.setLayout(null);
@@ -110,7 +110,7 @@ public class SoalUTS extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton1);
-        jButton1.setBounds(332, 208, 53, 23);
+        jButton1.setBounds(332, 208, 51, 23);
         jPanel2.add(jTextField2);
         jTextField2.setBounds(138, 32, 548, 32);
 
@@ -120,10 +120,10 @@ public class SoalUTS extends javax.swing.JFrame {
         jPanel2.add(jLabel3);
         jLabel3.setBounds(-20, -60, 1350, 530);
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 76, 720, 280);
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 76, 724, 280));
 
-        pack();
+        setSize(new java.awt.Dimension(716, 348));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
